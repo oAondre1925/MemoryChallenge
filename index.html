@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Memory Chanllenge</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="type=image/x-icon">
+</head>
+<body>
+
+    <div class="container">
+      <div class="successful-count">
+        <h3 id="successful-text"></h3>
+      </div>
+        <div class="header">
+            <h2>Memory Challenge</h2>
+            <h4 id="time">Time Left:</h4>
+
+            <audio id="myAudio" controls style="display: none;">
+              <source src="./audio/dream-day.mp3" type="audio/mpeg" >
+            </audio>
+          <button id="playPauseButton">🔊</button>
+          &nbsp;
+
+        </div>
+
+        <div class="cards"></div> 
+        <button id="reset" onclick="window.location.reload();">Start Again</button>
+
+    </div>
+
+    <div id="startAlert" class="start-alert" style="display: none;"> 
+        <div class="start-alert-content">
+          <span class="start-alert-message"></span>
+          <button class="start-alert-btn">Let's Go</button>
+        </div>
+      </div>
+
+      <div id="missionPass" class="mission-pass" style="display: none;">
+        <div class="pass-alert-content">
+          <span class="pass-alert-message"></span>
+          <button class="pass-alert-btn">Play Again</button>
+        </div>
+      </div>
+</body>
+<script src="index.js"></script>
+</html>
