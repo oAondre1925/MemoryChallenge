@@ -3,8 +3,11 @@ let emojis = images.sort(() => Math.random() - 0.5);
 let gameEnded = false;//判斷遊戲是否勝利
 
 let successText = document.getElementById('successful-text')
-let success = JSON.parse(localStorage.getItem('success'))
-successText.innerText =`成功次數:${success}`;
+success = JSON.parse(localStorage.getItem('success'))
+successText.innerText =`成功次數:0`;
+if(success>0){
+  successText.innerText =`成功次數:${success}`;
+}
 
 function showAlert(message) { //簡介畫面
   document.querySelector('.start-alert-message').textContent = message;
